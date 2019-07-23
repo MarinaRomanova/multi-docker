@@ -12,7 +12,7 @@ after_success:
 #build production images for every part of the project
   - docker build -t marinaromanova/multi-client ./client
   - docker build -t marinaromanova/multi-nginx ./nginx
-  - docker buiild -t marinaromanova/multi-server ./server
+  - docker build -t marinaromanova/multi-server ./server
   - docker build -t marinaromanova/multi-worker ./worker
 #login to docker cli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
